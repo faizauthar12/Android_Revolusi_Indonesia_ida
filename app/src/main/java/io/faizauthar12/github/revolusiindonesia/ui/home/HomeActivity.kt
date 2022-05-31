@@ -18,5 +18,6 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         contentHome = binding.contentHome
+        setSupportActionBar(binding.toolbar)
     }
 }
