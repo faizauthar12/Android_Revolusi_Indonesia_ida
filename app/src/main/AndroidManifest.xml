@@ -14,7 +14,7 @@
         android:theme="@style/Theme.RevolusiIndonesia"
         tools:targetApi="31">
         <activity
-            android:name=".HeroesActivity"
+            android:name=".ui.heroes.HeroesActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivity"

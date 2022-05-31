@@ -22,10 +22,11 @@ class HeroesActivity : AppCompatActivity() {
 
         // Heroes Adapter
         val heroesAdapter = HeroesAdapter()
+        heroesAdapter.setHero(heroes)
 
         // Recycleview
         with(binding.rvHero) {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            layoutManager = LinearLayoutManager(context)
 
             setHasFixedSize(true)
 
