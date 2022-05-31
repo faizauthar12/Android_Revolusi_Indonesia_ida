@@ -1,10 +1,12 @@
 package io.faizauthar12.github.revolusiindonesia.ui.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.faizauthar12.github.revolusiindonesia.R
 import io.faizauthar12.github.revolusiindonesia.databinding.ActivityHomeBinding
 import io.faizauthar12.github.revolusiindonesia.databinding.ContentHomeBinding
+import io.faizauthar12.github.revolusiindonesia.ui.heroes.HeroesActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -19,5 +21,11 @@ class HomeActivity : AppCompatActivity() {
 
         contentHome = binding.contentHome
         setSupportActionBar(binding.toolbar)
+
+        contentHome.imageButton.setOnClickListener {
+            Intent(this, HeroesActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
     }
 }
