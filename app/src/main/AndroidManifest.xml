@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="io.faizauthar12.github.revolusiindonesia">
-
     <!-- Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RevolusiIndonesia"
         tools:targetApi="31">
+        <activity
+            android:name=".DetailHeroesActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.heroes.HeroesActivity"
             android:exported="false" />
