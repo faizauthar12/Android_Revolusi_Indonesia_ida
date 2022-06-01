@@ -18,6 +18,8 @@ class HeroesActivity : AppCompatActivity() {
         binding = ActivityHeroesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         // ViewModel
         val viewModel = ViewModelProvider(this).get(HeroesViewModel::class.java)
         val heroes = viewModel.getHeroes()
@@ -44,5 +46,10 @@ class HeroesActivity : AppCompatActivity() {
 
             adapter = heroesAdapter
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

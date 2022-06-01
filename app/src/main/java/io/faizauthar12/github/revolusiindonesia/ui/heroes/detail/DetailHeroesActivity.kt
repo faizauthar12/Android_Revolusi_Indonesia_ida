@@ -21,6 +21,7 @@ class DetailHeroesActivity : AppCompatActivity() {
 
         contentDetail = binding.contentDetailHeroes
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val hero = intent.extras
         if (hero != null) {
@@ -32,11 +33,18 @@ class DetailHeroesActivity : AppCompatActivity() {
     }
 
     private fun populateDetailHeroes(heroEntity: HeroEntity) {
+        supportActionBar?.title = heroEntity.heroName
+
         contentDetail.tvHeroName.text = heroEntity.heroName
         contentDetail.tvHeroDescription.text = heroEntity.heroDescription
         Glide.with(this)
             .load(heroEntity.heroPicture)
             .into(contentDetail.ivHeroes)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     companion object {
