@@ -11,6 +11,8 @@ class HeroesAdapter : RecyclerView.Adapter<HeroesAdapter.HeroesViewHolder>() {
 
     private lateinit var binding: ItemsHeroesBinding
 
+    var onItemClickCallback: OnItemClickCallback? = null
+
     private val listHero = ArrayList<HeroEntity>()
 
     fun setHero(heroes: List<HeroEntity>?) {
@@ -26,22 +28,28 @@ class HeroesAdapter : RecyclerView.Adapter<HeroesAdapter.HeroesViewHolder>() {
 
     override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
         val hero = listHero[position]
-        holder.bind(hero)
+        holder.bind(hero) {
+            onItemClickCallback?.onItemClicked(hero)
+        }
     }
 
     override fun getItemCount(): Int = listHero.size
 
     class HeroesViewHolder(private val binding: ItemsHeroesBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(hero: HeroEntity) {
+        fun bind(hero: HeroEntity, itemClicked: () -> Unit) {
             with(binding) {
                 Glide.with(itemView.context)
                     .load(hero.heroPicture)
                     .into(imgHero)
 
                 tvHero.text = hero.heroName
+                itemView.setOnClickListener { itemClicked.invoke() }
             }
         }
+    }
 
+    interface OnItemClickCallback {
+        fun onItemClicked(hero: HeroEntity)
     }
 }
