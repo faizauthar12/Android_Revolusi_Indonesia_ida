@@ -17,10 +17,18 @@ class SejarahActivity : AppCompatActivity() {
         binding = ActivitySejarahBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         contentSejarah = binding.contentSejarah
 
         Glide.with(this)
             .load(R.drawable.sejarah)
             .into(contentSejarah.ivSejarah)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
