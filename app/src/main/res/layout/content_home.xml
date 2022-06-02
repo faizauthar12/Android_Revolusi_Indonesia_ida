@@ -47,6 +47,24 @@
         app:layout_constraintStart_toStartOf="@+id/ib_sejarah"
         app:layout_constraintTop_toBottomOf="@+id/ib_sejarah" />
 
+    <ImageButton
+        android:id="@+id/ib_lagu"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lagu Indonesia Raya"
+        app:layout_constraintEnd_toEndOf="@+id/ib_lagu"
+        app:layout_constraintStart_toStartOf="@+id/ib_lagu"
+        app:layout_constraintTop_toBottomOf="@+id/ib_lagu" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_centerline"
         android:layout_width="wrap_content"
