@@ -17,6 +17,10 @@
         android:theme="@style/Theme.RevolusiIndonesia"
         tools:targetApi="31">
         <activity
+            android:name=".ui.pancasila.PancasilaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RevolusiIndonesia.NoActionBar" />
+        <activity
             android:name=".ui.lagu.LaguActivity"
             android:exported="false"
             android:theme="@style/Theme.RevolusiIndonesia.NoActionBar" />
