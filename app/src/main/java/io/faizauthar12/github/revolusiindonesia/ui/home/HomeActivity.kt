@@ -8,6 +8,7 @@ import io.faizauthar12.github.revolusiindonesia.databinding.ActivityHomeBinding
 import io.faizauthar12.github.revolusiindonesia.databinding.ContentHomeBinding
 import io.faizauthar12.github.revolusiindonesia.ui.heroes.HeroesActivity
 import io.faizauthar12.github.revolusiindonesia.ui.lagu.LaguActivity
+import io.faizauthar12.github.revolusiindonesia.ui.pancasila.PancasilaActivity
 import io.faizauthar12.github.revolusiindonesia.ui.sejarah.SejarahActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -38,6 +39,12 @@ class HomeActivity : AppCompatActivity() {
 
         contentHome.ibLagu.setOnClickListener {
             Intent(this, LaguActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
+        contentHome.ibPancasila.setOnClickListener {
+            Intent(this, PancasilaActivity::class.java).apply {
                 startActivity(this)
             }
         }

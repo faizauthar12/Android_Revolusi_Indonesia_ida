@@ -39,6 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -64,6 +65,24 @@
         app:layout_constraintEnd_toEndOf="@+id/ib_lagu"
         app:layout_constraintStart_toStartOf="@+id/ib_lagu"
         app:layout_constraintTop_toBottomOf="@+id/ib_lagu" />
+
+    <ImageButton
+        android:id="@+id/ib_pancasila"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pancasila"
+        app:layout_constraintEnd_toEndOf="@+id/ib_pancasila"
+        app:layout_constraintStart_toStartOf="@+id/ib_pancasila"
+        app:layout_constraintTop_toBottomOf="@+id/ib_pancasila" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_centerline"
