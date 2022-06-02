@@ -9,17 +9,17 @@
         android:id="@+id/ib_pahlawan"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/ic_outline_person"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="66dp"
-        android:layout_height="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Pahlawan"
         app:layout_constraintEnd_toEndOf="@+id/ib_pahlawan"
@@ -27,5 +27,37 @@
         app:layout_constraintStart_toStartOf="@+id/ib_pahlawan"
         app:layout_constraintTop_toBottomOf="@+id/ib_pahlawan" />
 
+    <ImageButton
+        android:id="@+id/ib_sejarah"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sejarah"
+        app:layout_constraintEnd_toEndOf="@+id/ib_sejarah"
+        app:layout_constraintStart_toStartOf="@+id/ib_sejarah"
+        app:layout_constraintTop_toBottomOf="@+id/ib_sejarah" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
 </androidx.constraintlayout.widget.ConstraintLayout>
