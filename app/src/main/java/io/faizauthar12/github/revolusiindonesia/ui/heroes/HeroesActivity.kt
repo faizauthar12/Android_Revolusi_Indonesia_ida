@@ -19,6 +19,7 @@ class HeroesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Pahlawan"
 
         // ViewModel
         val viewModel = ViewModelProvider(this).get(HeroesViewModel::class.java)

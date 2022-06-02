@@ -19,6 +19,7 @@ class SejarahActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Sejarah"
 
         contentSejarah = binding.contentSejarah
 

@@ -19,6 +19,7 @@ class PancasilaActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Pancasila"
 
         contentPancasila = binding.contentPancasila
 

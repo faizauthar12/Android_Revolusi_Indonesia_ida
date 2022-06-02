@@ -15,6 +15,7 @@ class LaguActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Lagu Indonesia Raya"
     }
 
     override fun onSupportNavigateUp(): Boolean {
