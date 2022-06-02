@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         contentHome = binding.contentHome
         setSupportActionBar(binding.toolbar)
 
-        contentHome.imageButton.setOnClickListener {
+        contentHome.ibPahlawan.setOnClickListener {
             Intent(this, HeroesActivity::class.java).apply {
                 startActivity(this)
             }

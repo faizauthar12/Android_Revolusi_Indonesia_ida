@@ -5,24 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/ib_pahlawan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="260dp"
+        android:src="@drawable/ic_outline_person"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/ic_outline_person" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="66dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Pahlawan"
+        app:layout_constraintEnd_toEndOf="@+id/ib_pahlawan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ib_pahlawan"
+        app:layout_constraintTop_toBottomOf="@+id/ib_pahlawan" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pahlawan" />
-    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
