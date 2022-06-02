@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Indonesia tanah airku\nTanah Tumpah darahku\n Di sanalah aku berdiri\nJadi Pandu ibuku\nIndonesia kebangsaanku\nBangsa dan Tanah Airku\nMarilah kita berseru\nIndonesia bersatu" />
+        android:text="Indonesia tanah airku\nTanah Tumpah darahku\nDi sanalah aku berdiri\nJadi Pandu ibuku\nIndonesia kebangsaanku\nBangsa dan Tanah Airku\nMarilah kita berseru\nIndonesia bersatu" />
 
     <TextView
         android:layout_width="wrap_content"
