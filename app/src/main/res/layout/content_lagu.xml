@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginVertical="16dp"
+    android:divider="@drawable/text_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indonesia tanah airku\nTanah Tumpah darahku\n Di sanalah aku berdiri\nJadi Pandu ibuku\nIndonesia kebangsaanku\nBangsa dan Tanah Airku\nMarilah kita berseru\nIndonesia bersatu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiduplah tanahku\nHiduplah negeriku\nBangsaku Rakyatku semuanya\nBangunlah jiwanya\nBangunlah badannya\nUntuk Indonesia Raya\n" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indonesia Raya\nMerdeka Merdeka\nTanahku negriku yang kucinta" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indonesia Raya\nMerdeka Merdeka\nTanahku negriku yang kucinta" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indonesia Raya\nMerdeka Merdeka\nHiduplah Indonesia Raya" />
+</LinearLayout>
