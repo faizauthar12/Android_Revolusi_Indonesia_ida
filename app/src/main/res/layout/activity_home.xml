@@ -1,31 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/ib_pahlawan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_outline_person"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:titleCentered="true" />
-    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pahlawan"
+        app:layout_constraintEnd_toEndOf="@+id/ib_pahlawan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ib_pahlawan"
+        app:layout_constraintTop_toBottomOf="@+id/ib_pahlawan" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+    <ImageButton
+        android:id="@+id/ib_sejarah"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <include
-            android:id="@+id/content_home"
-            layout="@layout/content_home" />
-    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sejarah"
+        app:layout_constraintEnd_toEndOf="@+id/ib_sejarah"
+        app:layout_constraintStart_toStartOf="@+id/ib_sejarah"
+        app:layout_constraintTop_toBottomOf="@+id/ib_sejarah" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <ImageButton
+        android:id="@+id/ib_lagu"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lagu Indonesia Raya"
+        app:layout_constraintEnd_toEndOf="@+id/ib_lagu"
+        app:layout_constraintStart_toStartOf="@+id/ib_lagu"
+        app:layout_constraintTop_toBottomOf="@+id/ib_lagu" />
+
+    <ImageButton
+        android:id="@+id/ib_pancasila"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pancasila"
+        app:layout_constraintEnd_toEndOf="@+id/ib_pancasila"
+        app:layout_constraintStart_toStartOf="@+id/ib_pancasila"
+        app:layout_constraintTop_toBottomOf="@+id/ib_pancasila" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+</androidx.constraintlayout.widget.ConstraintLayout>
