@@ -1,13 +1,14 @@
 package io.faizauthar12.github.revolusiindonesia.ui.home
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import io.faizauthar12.github.revolusiindonesia.R
 import io.faizauthar12.github.revolusiindonesia.databinding.ActivityHomeBinding
-import io.faizauthar12.github.revolusiindonesia.ui.heroes.HeroesActivity
-import io.faizauthar12.github.revolusiindonesia.ui.lagu.LaguActivity
-import io.faizauthar12.github.revolusiindonesia.ui.pancasila.PancasilaActivity
-import io.faizauthar12.github.revolusiindonesia.ui.sejarah.SejarahActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -19,28 +20,21 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.ibPahlawan.setOnClickListener {
-            Intent(this, HeroesActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
+        setupBottomNavigation()
+    }
 
-        binding.ibSejarah.setOnClickListener {
-            Intent(this, SejarahActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
+    private fun setupBottomNavigation() {
+        val navView: BottomNavigationView = binding.navView
 
-        binding.ibLagu.setOnClickListener {
-            Intent(this, LaguActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
-
-        binding.ibPancasila.setOnClickListener {
-            Intent(this, PancasilaActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        // passing each menu ID as a aset of Ids because each
+        // menu should be considered as top level destinations.
+        val appbarConfiguration = AppBarConfiguration.Builder(
+            R.id.heroesFragment, R.id.sejarahFragment, R.id.laguFragment, R.id.pancasilaFragment
+        ).build()
+        setupActionBarWithNavController(navController, appbarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }
