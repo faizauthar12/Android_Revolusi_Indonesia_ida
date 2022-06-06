@@ -6,102 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeActivity">
 
-    <ImageButton
-        android:id="@+id/ib_pahlawan"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginBottom="32dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_soekarno"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Pahlawan"
-        app:layout_constraintEnd_toEndOf="@+id/ib_pahlawan"
-        app:layout_constraintStart_toStartOf="@+id/ib_pahlawan"
-        app:layout_constraintTop_toBottomOf="@+id/ib_pahlawan" />
-
-    <ImageButton
-        android:id="@+id/ib_sejarah"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginBottom="32dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_museum"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@drawable/colors_bottom_navigation"
+        app:itemTextColor="@drawable/colors_bottom_navigation"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Sejarah"
-        app:layout_constraintEnd_toEndOf="@+id/ib_sejarah"
-        app:layout_constraintStart_toStartOf="@+id/ib_sejarah"
-        app:layout_constraintTop_toBottomOf="@+id/ib_sejarah" />
-
-    <ImageButton
-        android:id="@+id/ib_lagu"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_lagu"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
+        app:menu="@menu/menu_home_bottom_navigation" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Lagu Indonesia Raya"
-        app:layout_constraintEnd_toEndOf="@+id/ib_lagu"
-        app:layout_constraintStart_toStartOf="@+id/ib_lagu"
-        app:layout_constraintTop_toBottomOf="@+id/ib_lagu" />
-
-    <ImageButton
-        android:id="@+id/ib_pancasila"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="32dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_pancasila"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Pancasila"
-        app:layout_constraintEnd_toEndOf="@+id/ib_pancasila"
-        app:layout_constraintStart_toStartOf="@+id/ib_pancasila"
-        app:layout_constraintTop_toBottomOf="@+id/ib_pancasila" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_centerline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent=".50" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontal_centerline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".50" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/home_navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

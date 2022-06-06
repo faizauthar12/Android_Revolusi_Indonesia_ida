@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/heroesFragment"
+        android:enabled="true"
+        android:title="Pahlawan" />
+
+    <item
+        android:id="@+id/sejarahFragment"
+        android:enabled="true"
+        android:title="Sejarah" />
+
+    <item
+        android:id="@+id/laguFragment"
+        android:enabled="true"
+        android:title="lagu Nasional" />
+
+    <item
+        android:id="@+id/pancasilaFragment"
+        android:enabled="true"
+        android:title="Pancasila" />
+</menu>

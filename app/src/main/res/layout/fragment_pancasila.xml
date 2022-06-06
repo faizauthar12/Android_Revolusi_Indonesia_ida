@@ -4,21 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.pancasila.PancasilaActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
-            app:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
-    </com.google.android.material.appbar.AppBarLayout>
+    tools:context=".ui.pancasila.PancasilaFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

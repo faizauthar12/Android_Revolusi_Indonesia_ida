@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/heroesFragment">
+
+    <fragment
+        android:id="@+id/heroesFragment"
+        android:name="io.faizauthar12.github.revolusiindonesia.ui.heroes.HeroesFragment"
+        android:label="Pahlawan"
+        tools:layout="@layout/fragment_heroes" />
+
+    <fragment
+        android:id="@+id/sejarahFragment"
+        android:name="io.faizauthar12.github.revolusiindonesia.ui.sejarah.SejarahFragment"
+        android:label="Sejarah"
+        tools:layout="@layout/fragment_sejarah" />
+
+    <fragment
+        android:id="@+id/laguFragment"
+        android:name="io.faizauthar12.github.revolusiindonesia.ui.lagu.LaguFragment"
+        android:label="Lagu Nasional"
+        tools:layout="@layout/fragment_lagu" />
+
+    <fragment
+        android:id="@+id/pancasilaFragment"
+        android:name="io.faizauthar12.github.revolusiindonesia.ui.pancasila.PancasilaFragment"
+        android:label="Pancasila"
+        tools:layout="@layout/fragment_pancasila" />
+</navigation>
