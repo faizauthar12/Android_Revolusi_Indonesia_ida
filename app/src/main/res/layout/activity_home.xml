@@ -8,11 +8,12 @@
 
     <ImageButton
         android:id="@+id/ib_pahlawan"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginTop="128dp"
         android:layout_marginBottom="32dp"
-        android:src="@drawable/ic_outline_person"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_soekarno"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
         app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,16 +25,17 @@
         android:layout_marginTop="8dp"
         android:text="Pahlawan"
         app:layout_constraintEnd_toEndOf="@+id/ib_pahlawan"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ib_pahlawan"
         app:layout_constraintTop_toBottomOf="@+id/ib_pahlawan" />
 
     <ImageButton
         android:id="@+id/ib_sejarah"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginTop="128dp"
         android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_museum"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_centerline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
@@ -51,8 +53,10 @@
 
     <ImageButton
         android:id="@+id/ib_lagu"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_lagu"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/vertical_centerline"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +73,11 @@
 
     <ImageButton
         android:id="@+id/ib_pancasila"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_pancasila"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/vertical_centerline"
         app:layout_constraintTop_toTopOf="@+id/horizontal_centerline" />
