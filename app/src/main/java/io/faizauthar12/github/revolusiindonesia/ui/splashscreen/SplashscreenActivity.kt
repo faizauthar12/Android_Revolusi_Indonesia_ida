@@ -9,7 +9,7 @@ import io.faizauthar12.github.revolusiindonesia.databinding.ActivitySplashscreen
 import io.faizauthar12.github.revolusiindonesia.ui.home.HomeActivity
 
 class SplashscreenActivity : AppCompatActivity() {
-    private val time: Long = 1100
+    private val time: Long = 1250
     private val alpha0 = 0f
     private val alpha1 = 1f
     private var propertyAnim: ViewPropertyAnimator? = null
